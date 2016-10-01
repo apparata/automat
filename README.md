@@ -1,5 +1,10 @@
 # automat
 
+Tool: ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+Generated code:
+![language Swift 3](https://img.shields.io/badge/language-Swift%203-orange.svg) ![platform iOS macOS tvOS](https://img.shields.io/badge/platform-iOS%20%7C%20tvOS%20%7C%20macOS-lightgrey.svg) ![license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)
+
 Interactive web tool for generating Swift state machine code by drawing a state diagram. Access the tool directly in your web browser here: https://apparata.github.io/automat
 
 The generated code is public domain and free to use in any type of project. The tool itself is released under the MIT license.
