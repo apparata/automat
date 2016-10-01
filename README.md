@@ -1,10 +1,11 @@
 # automat
 
-Interactive web tool for generating Swift state machine code by drawing a state diagram.
+Interactive web tool for generating Swift state machine code by drawing a state diagram. Access the tool directly in your web browser here: https://apparata.github.io/automat
 
-This version is usable, but the project is still in its infancy.
+The generated code is public domain and free to use in any type of project. The tool itself is released under the MIT license.
 
-Access the tool directly in your web browser here: https://apparata.github.io/automat
+NOTE: This version is usable, but the project is still in its infancy, so it's not incredibly robust.
+
 
 ## Example
 
