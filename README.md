@@ -21,7 +21,7 @@ NOTE: This version is usable, but the project is still in its infancy, so it's n
 The diagram above would result in a state machine with generated state and event enums in Swift. It could be used in the following way:
 
 ```swift
-let stateMachine = StateMachine(initialState: .ready)
+let stateMachine = ExampleStateMachine(initialState: .ready)
 
 stateMachine.didTransition = { from, event, to in
     // This is where you would act on transitions.
@@ -35,7 +35,7 @@ stateMachine.fire(event: .load)
 The public interface would look like this:
 
 ```swift
-public class StateMachine {
+public class ExampleStateMachine {
     
     public enum Error: Swift.Error {
         case illegalTransition(from: State, event: Event)
@@ -83,7 +83,7 @@ public class StateMachine {
     ///
     /// - parameter event: Event to fire.
     ///
-    /// - throws: `StateMachine.Error` if the transition is illegal.
+    /// - throws: `ExampleStateMachine.Error` if the transition is illegal.
     public func fireStrict(event: Event) throws
 }
 ```
