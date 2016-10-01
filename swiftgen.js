@@ -127,6 +127,16 @@ function buildStateMachine() {
 			machine.events.push(event);
 		}
 	}
+	
+	if (machine.states.count == 0) {
+	    alert("Add states to the diagram before generating Swift code.");
+	    return null;
+	}
+	
+	if (machine.events.count == 0) {
+	    alert("Add transitions to the diagram before generating Swift code.");
+	    return null;
+	}
 		
 	return machine;
 }
