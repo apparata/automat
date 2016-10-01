@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fsm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="fsm.js"></script>
+    <script src="base64.js"></script>
+    <script src="swiftgen.js"></script>
+</head>
+<body>
+	<h1>Finite State Machine Designer</h1>
+	<canvas id="canvas" width="1000" height="800">
+		<span class="error">Your browser does not support<br>the HTML5 &lt;canvas&gt; element</span>
+	</canvas>
+	<div>
+        <p class="center">Export as: <a href="javascript:saveAsSwift()">Swift</a> <input id="filename" type="text" value="MyStateMachine"> | <a href="javascript:saveAsPNG()">PNG</a></p>
+		<ul>
+			<li><b>Add a state:</b> double-click on the canvas</li>
+			<li><b>Add an arrow:</b> shift-drag on the canvas</li>
+			<li><b>Move something:</b> drag it around</li>
+			<li><b>Delete something:</b> click it and press the delete key (not the backspace key)</li>
+		</ul><ul>
+			<li><b>Make accept state:</b> double-click on an existing state</li>
+		</ul>
+	</div>
+	<p>Based on <a href="http://madebyevan.com/fsm">FSM Designer</a> by Evan Wallace</p>
+	<pre id="output"></pre>
+</body>
+</html>
