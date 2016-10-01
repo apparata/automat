@@ -27,7 +27,7 @@ public class __CLASSNAME__ {
     public typealias TransitionHandler = (_ from: State, _ event: Event, _ to: State) -> Void
 
     /// Called right after a transition has been made.
-    public var didTransition: (TransitionHandler)?
+    public var didTransition: TransitionHandler?
     
     /// The current state of the state machine.
     public private(set) var state: State
@@ -56,7 +56,7 @@ public class __CLASSNAME__ {
     ///
     /// - parameter event: Event to fire.
     ///
-    /// - throws: `StateMachine.Error` if the transition is illegal.
+    /// - throws: `__CLASSNAME__.Error` if the transition is illegal.
     public func fireStrict(event: Event) throws {
         guard let transition = __CLASSNAME__.validatedTransition(from: state, event: event) else {
             throw Error.illegalTransition(from: state, event: event)
