@@ -1,6 +1,6 @@
 # automat
 
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![language Javascript](https://img.shields.io/badge/language-javascript-orange.svg) ![platform web](https://img.shields.io/badge/platform-web-lightgrey.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Generated code:
 
