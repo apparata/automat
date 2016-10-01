@@ -12,7 +12,7 @@ Access the tool directly in your web browser here: https://apparata.github.io/au
 
 The diagram above would result in a state machine with generated state and event enums in Swift. It could be used in the following way:
 
-```
+```swift
 let stateMachine = StateMachine(initialState: .ready)
 
 stateMachine.didTransition = { from, event, to in
@@ -22,4 +22,60 @@ stateMachine.didTransition = { from, event, to in
 
 // Trigger a transition to the .loading state from the .ready state.
 stateMachine.fire(event: .load)
+```
+
+The public interface would look like this:
+
+```swift
+public class StateMachine {
+    
+    public enum Error: Swift.Error {
+        case illegalTransition(from: State, event: Event)
+    }
+    
+    public enum State {
+        case ready
+        case loading
+        case processing
+        case failed
+        case finished
+    }
+    
+    public enum Event {
+        case load
+        case madeProgress
+        case gotResponse
+        case fail
+        case finish
+        case retry
+        case finish
+    }
+    
+    public typealias TransitionHandler = (_ from: State, _ event: Event, _ to: State) -> Void
+
+    /// Called right after a transition has been made.
+    public var didTransition: (TransitionHandler)?
+    
+    /// The current state of the state machine.
+    public private(set) var state: State
+    
+    /// Initializes the state machine with an initial state.
+    ///
+    /// - parameter initialState: The initial state of the state machine.
+    public init(initialState: State)
+    
+    /// Fire an event which may result in a state transition.
+    ///
+    /// - parameter event: Event to fire.
+    /// 
+    /// - returns: `true` if transition was made. `false` otherwise.
+    @discardableResult public func fire(event: Event) -> Bool
+    
+    /// Fire an event which results in either a state transition or a thrown error.
+    ///
+    /// - parameter event: Event to fire.
+    ///
+    /// - throws: `StateMachine.Error` if the transition is illegal.
+    public func fireStrict(event: Event) throws
+}
 ```
