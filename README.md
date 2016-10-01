@@ -10,10 +10,9 @@ Interactive web tool for generating Swift state machine code by drawing a state 
 
 The generated code is public domain and free to use in any type of project. No attribution or anything needed.
 
-The tool itself is released under the MIT license.
+The tool itself is released under the MIT license and the diagram drawing functionality is based on [Finite State Machine Designer](http://madebyevan.com/fsm/) by Evan Wallace which in turn is also relased under the MIT license.
 
 NOTE: This version is usable, but the project is still in its infancy, so it's not incredibly robust.
-
 
 ## Example
 
