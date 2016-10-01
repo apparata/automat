@@ -54,7 +54,7 @@ public class StateMachine {
     public typealias TransitionHandler = (_ from: State, _ event: Event, _ to: State) -> Void
 
     /// Called right after a transition has been made.
-    public var didTransition: (TransitionHandler)?
+    public var didTransition: TransitionHandler?
     
     /// The current state of the state machine.
     public private(set) var state: State
