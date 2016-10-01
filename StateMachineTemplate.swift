@@ -2,11 +2,11 @@ import Foundation
 
 /// Example:
 /// ```
-/// let stateMachine = __CLASSNAME__(initialState: __FIRSTSTATE__)
+/// let stateMachine = __CLASSNAME__(initialState: .__FIRSTSTATE__)
 /// stateMachine.didTransition = { from, event, to in
 ///     print("\(from) -\(event)-> \(to)")
 /// }
-/// stateMachine.fire(event: __FIRSTEVENT__)
+/// stateMachine.fire(event: .__FIRSTEVENT__)
 /// ```
 public class __CLASSNAME__ {
     
