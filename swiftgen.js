@@ -128,12 +128,12 @@ function buildStateMachine() {
 		}
 	}
 	
-	if (machine.states.count == 0) {
+	if (machine.states.length == 0) {
 	    alert("Add states to the diagram before generating Swift code.");
 	    return null;
 	}
 	
-	if (machine.events.count == 0) {
+	if (machine.events.length == 0) {
 	    alert("Add transitions to the diagram before generating Swift code.");
 	    return null;
 	}
